@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("boasvindas")
-public class Controller {
+public class NinjaController {
 
     @GetMapping
     public String boasVindas(){
@@ -14,6 +14,6 @@ public class Controller {
 
     @GetMapping("/tchau")
     public String despedida(){
-        return "Até mais  ";
+        return "Até mais";
     }
 }
