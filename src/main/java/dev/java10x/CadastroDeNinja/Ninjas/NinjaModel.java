@@ -1,16 +1,23 @@
-package dev.java10x.CadastroDeNinja;
+package dev.java10x.CadastroDeNinja.Ninjas;
 
+import dev.java10x.CadastroDeNinja.Missoes.MissoesNinjas;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity // TRANFORMAR A CLASSE EM UMA ENTIDADE DO BD
 @Table(name = "tb_ninjas") // DAR NOME DA TABELA
 public class NinjaModel {
     @Id // GERA O ID
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // GERA O IDE DE FOMRA CRESCENTE
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // GERA O IDE DE FORMA CRESCENTE
     private long id;
     private String nome;
     private String email;
     private int idade;
+    // VARIOS PARA 1
+    @ManyToOne
+    @JoinColumn(name = "missoes-id") // CHAVE ESTRANGEIRA
+    private MissoesNinjas missoes;
 
     public NinjaModel() {
     }
