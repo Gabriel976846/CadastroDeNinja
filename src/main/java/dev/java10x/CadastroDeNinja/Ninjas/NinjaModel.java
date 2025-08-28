@@ -14,9 +14,8 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
-    // VARIOS PARA 1
-    @ManyToOne
-    @JoinColumn(name = "missoes-id") // CHAVE ESTRANGEIRA
+    @ManyToOne // VARIOS PARA 1
+    @JoinColumn(name = "missoes_id") // CHAVE ESTRANGEIRA
     private MissoesNinjas missoes;
 
     public NinjaModel() {
