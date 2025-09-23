@@ -13,8 +13,7 @@ public class MissoesNinjas {
     private long idmissao;
     private String nomemissa;
     private char rankmissao;
-
-    @OneToMany(mappedBy = "missoes")
+    @OneToMany(mappedBy = "missoes") //
     private List<NinjaModel> ninjas;
 
     public MissoesNinjas() {
