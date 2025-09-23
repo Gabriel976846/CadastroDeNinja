@@ -1,6 +1,6 @@
 package dev.java10x.CadastroDeNinja.Ninjas;
 
-import dev.java10x.CadastroDeNinja.Missoes.MissoesNinjas;
+import dev.java10x.CadastroDeNinja.Missoes.MissoesModel;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -9,14 +9,14 @@ import java.util.List;
 @Table(name = "tb_ninjas") // DAR NOME DA TABELA
 public class NinjaModel {
     @Id // GERA O ID
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // GERA O IDE DE FORMA CRESCENTE
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // GERA O ID DE FORMA CRESCENTE
     private long id;
     private String nome;
     private String email;
     private int idade;
     @ManyToOne // VARIOS PARA 1
     @JoinColumn(name = "missoes_id") // CHAVE ESTRANGEIRA
-    private MissoesNinjas missoes;
+    private List<MissoesModel> missoes;
 
     public NinjaModel() {
     }
