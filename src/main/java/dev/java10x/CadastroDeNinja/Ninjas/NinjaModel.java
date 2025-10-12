@@ -17,7 +17,10 @@ public class NinjaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // GERA O ID DE FORMA CRESCENTE E AUTOMATICAMENTE
     private long id;
     private String nome;
+
+    @Column(unique = true) // FALA QUE ESSA COLUNA SERA UNCIA
     private String email;
+
     private int idade;
     @ManyToOne // RELAÇÃO N:1 -- UM NINJA TEM UMA UNICA MISSÃO
     @JoinColumn(name = "missoes_id") // GERA A CHAVE ESTRAGENGEIRA FK
