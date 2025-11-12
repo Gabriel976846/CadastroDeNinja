@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 
 @Entity // TRANFORMAR A CLASSE EM UMA ENTIDADE DO BD
 @Table(name = "tb_cadastro") // NOME DA TABELA
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Data // DISPENSA A ESCRITA DE GETTER E SETTER, TOSTRING, EQUALS E HASHCODE E CONSTRUTORES DE ARGUMENTO OBRIGATORIOS
+@AllArgsConstructor // DISPENSA A ESCRITA DE UM CONSTRUTOR COM ARGUMENTO, FAZ AUTOMATICAMENTE
+@NoArgsConstructor // DISPENSA A ESCRITA DE UM CONSTRUTOR VAZIO, FAZ AUTOMATICAMENTE
 
 public class NinjaModel {
     @Id // GERA O ID
@@ -18,7 +18,7 @@ public class NinjaModel {
     private long id;
     private String nome;
 
-    @Column(unique = true) // FALA QUE ESSA COLUNA SERA UNCIA
+    @Column(unique = true) // FALA QUE ESSA COLUNA SERA UNICA
     private String email;
 
     private int idade;

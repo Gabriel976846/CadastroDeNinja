@@ -4,16 +4,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("boasvindas")
+@RequestMapping
 public class NinjaController {
 
-    @GetMapping
+    @GetMapping("/boasvindas")
     public String boasVindas(){
         return "Bem vindo a aplicação spring";
     }
 
-    @GetMapping("/tchau")
-    public String despedida(){
-        return "Até mais";
-    }
+
 }
