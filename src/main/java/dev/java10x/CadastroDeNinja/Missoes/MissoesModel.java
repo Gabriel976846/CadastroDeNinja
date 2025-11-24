@@ -19,7 +19,7 @@ public class MissoesModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
-    private char rank;
+    private String dificuldade;
     @OneToMany(mappedBy = "missoes") // RELAÇÃO 1:N -- UMA MISSÃO PODE TER VARIOS NINJAS
     private List<NinjaModel> ninjas;
 
