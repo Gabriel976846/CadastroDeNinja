@@ -2,7 +2,7 @@ package dev.java10x.CadastroDeNinja.Ninjas;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("ninja")
 public class NinjaController {
 
     @GetMapping("/boasvindas")
