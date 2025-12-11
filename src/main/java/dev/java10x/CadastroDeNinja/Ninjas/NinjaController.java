@@ -17,11 +17,11 @@ public class NinjaController {
         return "Ninja Criado";
     }
     //PROCURAR NINJA POR ID -- CREATE
-    @GetMapping("/mostrarNinjaporId")
-    public String mostrarNinjaId(){
-        return "Mostrar Ninja por id";
+    @GetMapping("/mostrarNinjaporId/{id}")
+    public NinjaModel mostrarNinjaID(@PathVariable long id){
+        return ninjaService.ninjaPesquisaID(id);
     }
-    
+
     //MOSTRAR TODOS OS NINJAS -- READ
     @GetMapping("/mostrar")
     public List<NinjaModel> mostrarNinja(){
