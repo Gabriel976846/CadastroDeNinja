@@ -18,9 +18,10 @@ public class MissoesController {
     }
 
     @GetMapping("missaoid/{id}")
-    public String mostarid(){
-        return "Ninja por Id";
+    public MissoesModel missaId(@PathVariable long id){
+        return missoesService.buscarMissao(id);
     }
+
     @PostMapping("/criar")
     public String criarMissao(){
         return "Missao Criada";
