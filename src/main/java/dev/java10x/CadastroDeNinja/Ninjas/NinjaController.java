@@ -13,8 +13,8 @@ public class NinjaController {
 
     //ADICIONAR NINJA -- CREATE
     @PostMapping("/criar")
-    public String criarNinja(){
-        return "Ninja Criado";
+    public NinjaModel criarNinja(@RequestBody NinjaModel ninjaModel){
+        return ninjaService.novoNinja(ninjaModel);
     }
     //PROCURAR NINJA POR ID -- CREATE
     @GetMapping("/mostrarNinjaporId/{id}")
@@ -27,6 +27,7 @@ public class NinjaController {
     public List<NinjaModel> mostrarNinja(){
         return ninjaService.listatNinjas();
     }
+
     //DELETAR NINJA -- UPDATE
     @PutMapping("/atualizarninja")
     public String atualizarninja(){
