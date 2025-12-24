@@ -22,8 +22,9 @@ public class NinjaService {
 
     // MOSTRAR NINJA POR ID
     public NinjaModel ninjaPesquisaID(Long id){
-        Optional<NinjaModel> ninjaModel =
-                ninjaRepository.findById(id);
+        // OPTIONAL É COMOS E FOSSE UMA CAIXA -- PODE TER UM VALOR OU NÃO
+        Optional<NinjaModel> ninjaModel = ninjaRepository.findById(id);
+        //RETORNA O VALOR DE ninjaModel -- E FAZ O TRATAMENTO CASO O VALOR SEJA VAZIO
         return ninjaModel.orElse(null);
     }
 

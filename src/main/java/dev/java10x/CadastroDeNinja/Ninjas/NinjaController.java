@@ -28,12 +28,13 @@ public class NinjaController {
         return ninjaService.listatNinjas();
     }
 
-    //DELETAR NINJA -- UPDATE
+    //ALTERAR DADOS DO NINJA
     @PutMapping("/atualizarninja")
     public String atualizarninja(){
         return "Alterar Ninja";
     }
-    //ALTERAR DADOS DO NINJA -- DELETE
+
+    //DELETAR NINJA -- UPDATE
     @DeleteMapping("deletarNinjaporId")
     public String deletarNija(){
         return "Ninja deletado";

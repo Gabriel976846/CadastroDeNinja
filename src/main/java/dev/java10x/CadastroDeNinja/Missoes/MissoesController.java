@@ -23,8 +23,8 @@ public class MissoesController {
     }
 
     @PostMapping("/criar")
-    public String criarMissao(){
-        return "Missao Criada";
+    public MissoesModel criarMissao(@RequestBody MissoesModel missoesModel){
+        return missoesService.cadastrarMissao(missoesModel);
     }
 
     @PutMapping("/alterarMissao")
